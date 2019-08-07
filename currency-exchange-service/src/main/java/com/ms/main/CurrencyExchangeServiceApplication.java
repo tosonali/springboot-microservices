@@ -9,16 +9,18 @@ import brave.sampler.Sampler;
 
 @SpringBootApplication
 @EnableDiscoveryClient
-public class LimitsServicesApplication {
+public class CurrencyExchangeServiceApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(LimitsServicesApplication.class, args);
+		SpringApplication.run(CurrencyExchangeServiceApplication.class, args);
 	}
 	
-	/*
-	 * @Bean public Sampler defaultSampler() { return Sampler.ALWAYS_SAMPLE;
-	 * 
-	 * }
-	 */
-
+	/* Setup of Sleuth for assigning unique ID to each request. */
+	
+	  @Bean 
+	  public Sampler defaultSampler() 
+	  { 
+		  return Sampler.ALWAYS_SAMPLE; 
+	  }
+	 
 }
