@@ -32,7 +32,7 @@ public class CurrencyConversionController {
 		CurrencyConverionBean response = proxy.retrieveExchangeValue(from, to);
 		
 		logger.info("{}",response);
-		
+		logger.info("Testing for git repo");
 		return new CurrencyConverionBean(response.getId(), from, to, response.getConversionMultiple(), quantity, 
 				quantity.multiply(response.getConversionMultiple()),response.getPort()) ;
 	}
